@@ -52,7 +52,7 @@ implementation project(':opencv')
 
 With the OpenCV module integrated, it's time to load the OpenCV library so that you can call OpenCV methods or functions from the app.
 
-```Java
+```java
 package com.ranju.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
