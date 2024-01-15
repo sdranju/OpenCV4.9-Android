@@ -15,21 +15,26 @@ Download OpenCV Android SDK 4.9 from the Github repository (https://github.com/o
 **Step 2: Extract the SDK**
 
 After downloading, extract the SDK and place it in a convenient location. The folder structure should resemble the following after extraction.
+
 ![Folder tructure](02_extracted_opencv.png)
 <br><br>
 
 **Step 3: Import OpenCV Module into Android Studio**
 
 To import the OpenCV module into your Android project, navigate to File -> New -> Import Module.
+
 ![Import Module](04_import_module.png)
 
 Browse to the folder where you placed the extracted OpenCV SDK, select the "sdk" folder, provide a desired name for the module, and click "Finish." This action will import the OpenCV module into your Android project.
+
 ![Set Module Name](05_module_name.png)
 
 The module will be imported, but you may encounter Gradle build errors at this stage.
+
 ![Module Imported](06_module_imported.png)
 
 To resolve errors, switch from the Android pane to the Build log pane at the bottom of Android Studio. Click on the Build file (.../opencv/build.gradle) and make the necessary corrections marked in the screenshot. Finally, click the sync button to allow Gradle to sync the project.
+
 ![Fix Import Error](07_module_error_fixed.png)
 <br><br>
 
