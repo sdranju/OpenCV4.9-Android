@@ -11,7 +11,10 @@ The OpenCV Android SDK has undergone significant changes recently, rendering man
 
 Step 1: Download OpenCV SDK 4.9
 Download OpenCV Android SDK 4.9 from the Github repository (https://github.com/opencv/opencv/releases).
-[01_download_opencv_sdk.png]
+
+![Download OpenCV SDK](https://github.com/sdranju/OpenCV4.9-Android/01_download_opencv_sdk.png)
+
+
 
 
 Step 2: Extract the SDK
