@@ -1,53 +1,53 @@
 # OpenCV4.9-Android
-OpenCV 4.9 integration in Android Studio for Android projects
-
 Android Studio: Step-by-Step Guide for Setting up OpenCV SDK 4.9 on Android
 
 
-Details:
-
 The OpenCV Android SDK has undergone significant changes recently, rendering many existing guides outdated. This how-to guide aims to provide an up-to-date, step-by-step process for setting up the latest OpenCV SDK 4.9 in Android Studio for Android projects.
+<br><br>
 
+**Step 1: Download OpenCV SDK 4.9**
 
-Step 1: Download OpenCV SDK 4.9
 Download OpenCV Android SDK 4.9 from the Github repository (https://github.com/opencv/opencv/releases).
 
-![Download OpenCV SDK](https://github.com/sdranju/OpenCV4.9-Android/01_download_opencv_sdk.png)
+![Download OpenCV SDK](01_download_opencv_sdk.png)
+<br><br>
 
+**Step 2: Extract the SDK**
 
-
-
-Step 2: Extract the SDK
 After downloading, extract the SDK and place it in a convenient location. The folder structure should resemble the following after extraction.
-[02_extracted_opencv.png]
+![Folder tructure](02_extracted_opencv.png)
+<br><br>
 
+**Step 3: Import OpenCV Module into Android Studio**
 
-Step 3: Import OpenCV Module into Android Studio
 To import the OpenCV module into your Android project, navigate to File -> New -> Import Module.
-[04_import_module.png]
+![Import Module](04_import_module.png)
 
 Browse to the folder where you placed the extracted OpenCV SDK, select the "sdk" folder, provide a desired name for the module, and click "Finish." This action will import the OpenCV module into your Android project.
-[05_module_name.png]
+![Set Module Name](05_module_name.png)
 
 The module will be imported, but you may encounter Gradle build errors at this stage.
-[06_module_imported.png]
+![Module Imported](06_module_imported.png)
 
 To resolve errors, switch from the Android pane to the Build log pane at the bottom of Android Studio. Click on the Build file (.../opencv/build.gradle) and make the necessary corrections marked in the screenshot. Finally, click the sync button to allow Gradle to sync the project.
-[07_module_error_fixed.png]
+![Fix Import Error](07_module_error_fixed.png)
+<br><br>
 
+**Step 4: Add the OpenCV Dependency**
 
-Step 4: Add the OpenCV Dependency
 Open your app-level build.gradle file and add the following line inside the "dependencies" block. Sync your project with Gradle by clicking the "Sync Now" button in Android Studio. Once the sync is completed, your Android project is now equipped with OpenCV.
-
+```
 implementation project(':opencv')
+```
 
-[08_sync_project.png]
+![Sync Project](08_sync_project.png)
+<br><br>
 
+**Step 5: Load the OpenCV Library**
 
-Step 5: Load the OpenCV Library
 With the OpenCV module integrated, it's time to load the OpenCV library so that you can call OpenCV methods or functions from the app.
 
-[CODE]
+```Java
 package com.ranju.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -109,8 +109,9 @@ public class MainActivity extends AppCompatActivity {
         return resizedBitmap;
     }
 }
+```
 
-[/CODE]
 
+***Congratulations!*** 
 
-Congratulations! You've successfully navigated the steps to integrate the latest OpenCV SDK into your Android Studio project. Now, let the enchanting capabilities of OpenCV work their magic and elevate your projects to new heights. May your coding journey be filled with innovation and success!
+You've successfully navigated the steps to integrate the latest OpenCV SDK into your Android Studio project. Now, let the enchanting capabilities of OpenCV work their magic and elevate your projects to new heights. May your coding journey be filled with innovation and success!
